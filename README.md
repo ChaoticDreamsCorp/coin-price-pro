@@ -47,7 +47,7 @@ https://code.visualstudio.com/download
 
 2. **Setting up: Automatic formatting on save**
 
-   2.1 Go to preferences:
+   - 2.1 Go to preferences:
 
    MacOS: `cmd+Shift+p`
 
@@ -56,7 +56,11 @@ https://code.visualstudio.com/download
    Linux: `ctrl+Alt+p`
    this can very on Linux :octocat:
 
-[![Setup auto format on save](https://img.youtube.com/vi/WCsHvCdyPY8/0.jpg)](https://www.youtube.com/watch?v=WCsHvCdyPY8)
+   - 2.2 On the preference search bar type: format on save
+
+   Video Here:
+
+   [![Setup auto format on save](https://img.youtube.com/vi/WCsHvCdyPY8/0.jpg)](https://www.youtube.com/watch?v=WCsHvCdyPY8)
 
 3. **Create a New React App:**
 
