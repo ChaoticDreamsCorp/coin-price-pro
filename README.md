@@ -36,9 +36,15 @@ Mac/Linux
       npm -v
       ```
 
-      1.1
+      1.1 Linux
+
+      ```bash
       sudo apt-get update
+      ```
+
+      ```bash
       sudo apt-get install nodejs npm
+      ```
 
 1.  **Install a Code Editor:**
 
@@ -53,8 +59,7 @@ https://code.visualstudio.com/download
 
    Windows: `ctrl+Shift+p`
 
-   Linux: `ctrl+Alt+p`
-   this can very on Linux :octocat:
+   Linux: `ctrl+Alt+p` ( this can very on Linux :octocat: )
 
    - 2.2 On the preference search bar type: format on save
 
@@ -71,10 +76,18 @@ https://code.visualstudio.com/download
      npm create vite@latest
      ```
 
-\*\*\* Follow the instructions on the terminal
-$ cd btc-price-ws
-$ npm install
-$ npm run dev
+**Follow the instructions on the terminal**
+
+```bash
+ cd btc-price-ws
+ ```
+```bash
+ npm install
+ ```
+ ```bash
+ npm run dev
+ ```
+
 
 ** Vite is a build tool and development server that is designed to enhance the development experience for modern web applications, including those built with JavaScript frameworks like React, Vue.js, and others. Vite, which means "fast" in French, **
 
@@ -96,7 +109,9 @@ $ npm run dev
      npm run dev
      ```
 
-   - Your React app will be available at `http://localhost:3000` by default. Open this URL in your web browser.
+   - Your React app will be available at `http://localhost:5173` by default.
+   But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
+   ![Default Port](public/static/localhost_port.png)
 
 6. **Edit and Develop Your React App:**
 
