@@ -5,6 +5,7 @@ import {
 } from "./PriceWebSocket";
 import { WebSocketMessage } from "./types";
 import { formatCurrency } from "../../utils";
+import React from "react";
 
 function PriceWebSocket() {
   const [messages, setMessages] = useState<WebSocketMessage[]>([]);
@@ -21,17 +22,23 @@ function PriceWebSocket() {
 
   return (
     <>
-      <h1>
-        BTC Price: {
-        messages.map((msg) => {
-          return (
-            <span key={msg.bitcoin}>
-              {formatCurrency(Number(msg.bitcoin), 'USD')}
-            </span>
-          )
-        })
-      }
-      </h1>
+      <div className="d-flex justify-content-center">        
+      {messages.length >= 1 ? (
+        <div className="d-flex justify-content-center">
+          {messages.map((msg) => (
+            <React.Fragment key={msg.bitcoin}>
+              <h1 className="mx-3">BTC Price:</h1>
+              <span>{formatCurrency(Number(msg.bitcoin), 'USD')}</span>
+            </React.Fragment>
+          ))}
+        </div>
+      ) : (
+        <div className="spinner-border text-secondary" role="status">
+          <span className="sr-only d-none">Loading...</span>
+        </div>
+      )}
+
+      </div>
     </>
   );
 }

@@ -23,15 +23,15 @@ function HomeContainer () {
       <p className="lead">
         <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
       </p>
-      { emails.map((record) => {
-        return <>
-          <div className="card d-none" key={record.id}>
+      {emails.map((record) => {
+        return (
+          <div key={record.id} className="card d-none">
             <div className="card-body">
               <b>{record.email}</b>
             </div>
           </div>
-        </>
-      }) }
+        )
+      })}
     </>
   )
 }
