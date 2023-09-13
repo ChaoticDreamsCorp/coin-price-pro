@@ -1,5 +1,7 @@
+# ignore npm package deps:
 node_modules/
 
+# ignore env files:
 .env
 .env.development
 .env.local
