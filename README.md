@@ -62,14 +62,15 @@ https://code.visualstudio.com/download
 **Follow the instructions on the terminal**
 ```bash
  cd btc-price-ws
- ```
+```
+
 ```bash
  npm install
- ```
- ```bash
- npm run dev
- ```
+```
 
+```bash
+npm run dev
+```
 
 ** Vite is a build tool and development server that is designed to enhance the development experience for modern web applications, including those built with JavaScript frameworks like React, Vue.js, and others. Vite, which means "fast" in French, **
 
@@ -80,7 +81,7 @@ https://code.visualstudio.com/download
    - Change your working directory to the newly created app folder:
 
      ```bash
-     cd my-react-app
+     cd my-react-app (the name of your project)
      ```
 5. **Start the Development Server:**
    - Start the development server to run your React app locally. Run the following command:
@@ -88,16 +89,22 @@ https://code.visualstudio.com/download
      npm run dev
      ```
    - Your React app will be available at `http://localhost:5173` by default.
-   But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
-   ![Default Port](public/static/localhost_port.png)
+     But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
+     ![Default Port](public/static/localhost_port.png)
+
 6. **Edit and Develop Your React App:**
    - Use your chosen code editor to modify the source code located in the `src` directory.
    - The main React component is located in the `src/App.js` (or `src/App.jsx`) file. You can start editing this file to build your app.
 7. **Add Additional Packages (Optional):**
-   socket.io
-   import { io } from "socket.io-client";
+
+   package: socket.io
+
+   importing in code: import { io } from "socket.io-client";
+
+   npm i (shorthand for install)
+
    npm install socket.io-client
-   nom i
+
    - Depending on your project requirements, you may need to install additional npm packages for state management, routing, styling, etc. Install them using `npm install`.
 8. **Build for Production (Optional):**
    - When you're ready to deploy your app, you can create a production build by running:
