@@ -80,14 +80,15 @@ https://code.visualstudio.com/download
 
 ```bash
  cd btc-price-ws
- ```
+```
+
 ```bash
  npm install
- ```
- ```bash
- npm run dev
- ```
+```
 
+```bash
+npm run dev
+```
 
 ** Vite is a build tool and development server that is designed to enhance the development experience for modern web applications, including those built with JavaScript frameworks like React, Vue.js, and others. Vite, which means "fast" in French, **
 
@@ -98,7 +99,7 @@ https://code.visualstudio.com/download
    - Change your working directory to the newly created app folder:
 
      ```bash
-     cd my-react-app
+     cd my-react-app (the name of your project)
      ```
 
 5. **Start the Development Server:**
@@ -110,8 +111,8 @@ https://code.visualstudio.com/download
      ```
 
    - Your React app will be available at `http://localhost:5173` by default.
-   But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
-   ![Default Port](public/static/localhost_port.png)
+     But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
+     ![Default Port](public/static/localhost_port.png)
 
 6. **Edit and Develop Your React App:**
 
@@ -120,13 +121,13 @@ https://code.visualstudio.com/download
 
 7. **Add Additional Packages (Optional):**
 
-   socket.io
+   package: socket.io
 
-   import { io } from "socket.io-client";
+   importing in code: import { io } from "socket.io-client";
+
+   npm i (shorthand for install)
 
    npm install socket.io-client
-
-   nom i
 
    - Depending on your project requirements, you may need to install additional npm packages for state management, routing, styling, etc. Install them using `npm install`.
 
