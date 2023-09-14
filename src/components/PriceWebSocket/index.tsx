@@ -11,26 +11,30 @@ function PriceWebSocket() {
   const ws = createPriceWebSocketConn("wss://ws.coincap.io/prices?assets=bitcoin");
 
   useEffect(() => {
-    const cleanup = addWebSocketEventListener(ws, (messages) => {
+    return addWebSocketEventListener(ws, (messages) => {
       return setMessages(messages);
     });
-
-    // return cleanup;
-    return cleanup;
   }, [ws]);
 
   return (
     <>
       <h1>
-        BTC Price: {
-        messages.map((msg) => {
-          return (
-            <span key={msg.bitcoin}>
-              {formatCurrency(Number(msg.bitcoin), 'USD')}
-            </span>
-          )
-        })
-      }
+        {
+          messages.length > 0 ? // if messages in state
+          messages.map((msg) => { // render message contents
+            return (
+              <>
+                <span className="mx-3">BTC Price:</span>
+                <span key={msg.bitcoin}>
+                  {formatCurrency(Number(msg.bitcoin), 'USD')}
+                </span>
+              </>
+            )
+          }) : // else, render loading spinner
+          <div className="spinner-border text-secondary" role="status">
+            <span className="sr-only d-none">Loading...</span>
+          </div>
+        }
       </h1>
     </>
   );
