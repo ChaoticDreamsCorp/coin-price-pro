@@ -14,29 +14,14 @@ export const closePriceWebSocketConn = function (ws: WebSocket) {
   return ws.close();
 }
 
-export const InitWs = function(url: string) {
-  if (!url)
-    throw new Error("Websocket URL cannot be undefined")
-  return new WebSocket("");
-}
-
-export const ListenIncoming = function (
+export const addWebSocketEventListener = function (
   ws: WebSocket,
-  stateSetterCb: (messages: WebSocketMessage[]) => void,
+  stateSetterCb: (messages: WebSocketMessage[]) => void
 ): (() => void) {
   const eventListener = (incomingMsg: MessageEvent) => {
     const message = processPriceSocketMsg(incomingMsg.data);
-    stateSetterCb([ message ]);
-  }
-
-export const initWsConnAndAddEventListener = function (
-  ws: WebSocket,
-  stateSetterCb: (messages: WebSocketMessage[]) => void,
-): (() => void) {
-  const eventListener = (incomingMsg: MessageEvent) => {
-    const message = processPriceSocketMsg(incomingMsg.data);
-    stateSetterCb([ message ]);
-  }
+    stateSetterCb([message]);
+  };
   
   ws.addEventListener(PRICE_WS_MSG_EVENT, eventListener);
 
