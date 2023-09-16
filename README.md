@@ -1,6 +1,6 @@
-SHELLHACKS WORKSHOP: How-to:
+# SHELLHACKS WORKSHOP HACKER GUIDE
 
-Today we are going to learn a bit about web development. How to create an application using React. Tools we will learn a bit about are: nodejs, npm, vite.
+Today we are going to learn a bit about web development. How to create an application using React. Tools we will learn a bit about are: **Node.js**, **NPM**, **Vite**.
 
 We will be using the Websocket API from JavaScript to connect to a public server to get realtime Bitcoin pricing data and use React to create a UI to display it.
 
@@ -11,7 +11,10 @@ We will be using the Websocket API from JavaScript to connect to a public server
 - VisualStudio: https://visualstudio.microsoft.com/downloads/
 - NodeJs v.18 LTS (includes npm): https://nodejs.org/
 - Public WSS: `wss://ws.coincap.io/prices?assets=bitcoin`
-
+- https://www.npmjs.com/
+- https://vitejs.dev/
+- https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+  
 ---
 
 **Prerequisite Guide for Creating a Simple React App:**
@@ -19,18 +22,18 @@ We will be using the Websocket API from JavaScript to connect to a public server
 For Windows users:
 https://learn.microsoft.com/en-us/windows/wsl/install
 
-In power shell:
+In Windows Powershell:
 
-1. wsl --install
+1. `wsl --install`
 2. Once you have installed WSL, you will need to create a user account and password for your newly installed Linux distribution
 
-Mac/Linux
+### Mac/Linux
 
 1.  **Install Node.js and npm:**
 
 1.  Go to https://nodejs.org/ and download the LTS version
     1. (Can someone tell me what LTS stands for?)
-1.  - Make sure you have Node.js and npm (Node Package Manager) installed on your computer. Version 18 specifically
+2. Make sure you have Node.js and npm (Node Package Manager) installed on your computer. Version 18 specifically
 
       ```bash
       node -v
