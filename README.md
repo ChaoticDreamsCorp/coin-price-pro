@@ -10,6 +10,7 @@ We will be using the Websocket API from JavaScript to connect to a public server
 
 - VisualStudio: https://visualstudio.microsoft.com/downloads/
 - NodeJs v.18 LTS (includes npm): https://nodejs.org/
+- Public WSS: `wss://ws.coincap.io/prices?assets=bitcoin`
 
 ---
 
@@ -155,6 +156,100 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Next Steps: Take this App all the way!
+
+This code appears to be a React component that establishes a WebSocket connection to retrieve the price of Bitcoin (BTC) from the "wss://ws.coincap.io/prices?assets=bitcoin" WebSocket endpoint. It then displays the received WebSocket messages on the webpage. To take this proof of concept (POC) further and integrate it with other APIs, you can follow these steps:
+
+1. **API Integration**:
+
+   - Decide which other APIs you want to integrate with. This could include cryptocurrency data APIs, financial market APIs, or any other data source that you find relevant to your application.
+
+2. **Component Refactoring**:
+
+   - Refactor the existing `WebSocket2` component to make it more reusable and generic. You can create a new component, such as `CryptoPriceTracker`, and pass in the WebSocket URL as a prop.
+
+   ```jsx
+   // CryptoPriceTracker.js
+   import React, { useEffect, useState } from "react";
+
+   function CryptoPriceTracker({ websocketUrl }) {
+     // ... rest of the component code
+   }
+
+   export default CryptoPriceTracker;
+   ```
+
+3. **WebSocket Configuration**:
+
+   - Modify the `CryptoPriceTracker` component to accept the WebSocket URL as a prop and make the WebSocket connection dynamic. This allows you to reuse the component for different cryptocurrencies or data sources.
+
+   ```jsx
+   function CryptoPriceTracker({ websocketUrl }) {
+     const [messages, setMessages] = useState([]);
+
+     useEffect(() => {
+       const ws = new WebSocket(websocketUrl);
+
+       ws.addEventListener("message", (event) => {
+         const message = JSON.parse(event.data) as WebSocketMessage;
+         setMessages((prevMessages) => [...prevMessages, message]);
+       });
+
+       return () => {
+         ws.close();
+       };
+     }, [websocketUrl]);
+
+     // ... rest of the component code
+   }
+   ```
+
+4. **API Integration**:
+
+   - For each additional API you want to integrate with, create a new instance of the `CryptoPriceTracker` component, passing in the appropriate WebSocket URL as a prop. You can do this within your main application component or route.
+
+   ```jsx
+   import React from "react";
+   import CryptoPriceTracker from "./CryptoPriceTracker";
+
+   function App() {
+     return (
+       <div>
+         <CryptoPriceTracker websocketUrl="wss://ws.coincap.io/prices?assets=bitcoin" />
+         <CryptoPriceTracker websocketUrl="wss://ws.example.com/other-crypto" />
+         {/* Add more instances for other APIs */}
+       </div>
+     );
+   }
+
+   export default App;
+   ```
+
+5. **Data Presentation**:
+
+   - Customize the presentation of data for each API. You may want to create separate components or sections for each cryptocurrency or data source to display relevant information.
+
+6. **Error Handling**:
+
+   - Implement error handling for WebSocket connections and API requests. Handle cases where the WebSocket connection fails or data retrieval encounters issues.
+
+7. **Optimization**:
+
+   - Consider optimizing the component to prevent excessive updates or memory leaks. You can limit the number of displayed messages or implement pagination for historical data.
+
+8. **Documentation**:
+
+   - Document your code and components, especially if you plan to collaborate with others or maintain the project over time.
+
+9. **Testing**:
+
+   - Write tests to ensure the reliability and correctness of your components, especially when dealing with real-time data.
+
+10. **Styling and UI Enhancements**:
+    - Improve the user interface and styling to make the information more visually appealing and user-friendly.
+
+By following these steps, you can extend your POC to integrate with multiple APIs and present data from different sources within your React application. This approach makes your code more modular and maintainable, allowing you to add new data sources and functionalities more easily in the future.
 
 ## Expanding the ESLint configuration
 
