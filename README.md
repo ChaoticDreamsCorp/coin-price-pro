@@ -39,49 +39,31 @@ In Windows Powershell:
       node -v
       npm -v
       ```
-
       1.1 Linux
-
       ```bash
       sudo apt-get update
       ```
-
       ```bash
       sudo apt-get install nodejs npm
       ```
-
 1.  **Install a Code Editor:**
-
 Visual Studio Code:
 https://code.visualstudio.com/download
-
 2. **Setting up: Automatic formatting on save**
-
    - 2.1 Go to preferences:
-
    MacOS: `cmd+Shift+p`
-
    Windows: `ctrl+Shift+p`
-
    Linux: `ctrl+Alt+p` ( this can very on Linux :octocat: )
-
    - 2.2 On the preference search bar type: format on save
-
    Video Here:
-
    [![Setup auto format on save](https://img.youtube.com/vi/WCsHvCdyPY8/0.jpg)](https://www.youtube.com/watch?v=WCsHvCdyPY8)
-
 3. **Create a New React App:**
-
    - Open your terminal or command prompt.
    - Run the following command to create a new React app using Create React App:
-
      ```bash/bash
      npm create vite@latest
      ```
-
 **Follow the instructions on the terminal**
-
 ```bash
  cd btc-price-ws
 ```
@@ -105,24 +87,18 @@ npm run dev
      ```bash
      cd my-react-app (the name of your project)
      ```
-
 5. **Start the Development Server:**
-
    - Start the development server to run your React app locally. Run the following command:
-
      ```bash
      npm run dev
      ```
-
    - Your React app will be available at `http://localhost:5173` by default.
      But could be a different port depending on your machine so click on whichever localhost:port combination your machine tells you. Open this URL in your web browser.
      ![Default Port](public/static/localhost_port.png)
 
 6. **Edit and Develop Your React App:**
-
    - Use your chosen code editor to modify the source code located in the `src` directory.
    - The main React component is located in the `src/App.js` (or `src/App.jsx`) file. You can start editing this file to build your app.
-
 7. **Add Additional Packages (Optional):**
 
    package: socket.io
@@ -134,21 +110,14 @@ npm run dev
    npm install socket.io-client
 
    - Depending on your project requirements, you may need to install additional npm packages for state management, routing, styling, etc. Install them using `npm install`.
-
 8. **Build for Production (Optional):**
-
    - When you're ready to deploy your app, you can create a production build by running:
-
      ```bash
      npm run build
      ```
-
    - This command will generate an optimized build of your app in the `build` directory.
-
 9. **Deploy Your React App (Optional):**
-
    - Deploy your React app to a web hosting platform or server of your choice. Common options include Netlify, Vercel, GitHub Pages, or a traditional web host.
-
 That's it! You've completed the prerequisite guide for creating a simple React app. This guide will help you get started with setting up your development environment and building a basic React application.
 
 # React + TypeScript + Vite
