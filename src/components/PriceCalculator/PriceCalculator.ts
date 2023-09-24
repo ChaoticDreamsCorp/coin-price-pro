@@ -1,16 +1,4 @@
-import { CurrencyExchange } from './components/PriceCalculator/PriceInterface';
-
-
-export const formatCurrency = function formatCurrency(amount: number, currencyCode?: string): string {
-  if (!currencyCode) currencyCode = 'USD';
-  const formattedString = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: currencyCode,
-  }).format(amount);
-  return formattedString;
-}
-
-
+import { CurrencyExchange } from './PriceInterface';
 
 export const GetFiatAmount = function({CurrencyAmount, CryptoAmount} : CurrencyExchange) {
     // If less than or eq zero return 1 else return original amount
