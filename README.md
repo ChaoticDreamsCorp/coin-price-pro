@@ -265,3 +265,4 @@ Sample `firebase-admin.json` JSON:
 ```
 
 - Next run: `npm run emulators`
+- Next run: `npm run server:dev`

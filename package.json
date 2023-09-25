@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "emulators": "firebase emulators:start",
-    "emulators:help": "firebase emulators --help"
+    "emulators:help": "firebase emulators --help",
+    "server:dev": "node api/entry.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
