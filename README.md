@@ -244,6 +244,7 @@ If you are developing a production application, we recommend updating the config
 
 # Configuring Firebase Local Emulators
 Requirements:
+- Install firebase tools cli: `curl -sL firebase.tools | bash`
 - You should have a `firebase-admin.json` file in the project root. This file will contain service account keys for firebase-admin. This is required in order to run the emulators.
 
 Sample `firebase-admin.json` JSON:
