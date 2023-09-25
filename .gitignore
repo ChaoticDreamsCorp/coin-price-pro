@@ -44,3 +44,6 @@ pnpm-debug.log*
 
 # Ignore editor backup files
 *~
+
+# firebase-admin sdk json
+firebase-admin.json
