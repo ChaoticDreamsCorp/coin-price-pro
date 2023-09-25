@@ -48,4 +48,4 @@ pnpm-debug.log*
 # firebase-admin sdk json
 firebase-admin.json
 
-/server/.env
+/api/.env
