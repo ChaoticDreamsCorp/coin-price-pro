@@ -1,27 +1,13 @@
+/* eslint-disable no-undef */
 import { initializeApp } from 'firebase/app';
-import firebaseAdmin from 'firebase-admin'; // Import the default export
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore/lite';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore/lite'; // Import getDocs
 import dotenv from 'dotenv';
 import express from 'express';
-import { Firestore, collection, addDoc, getDocs } from 'firebase/firestore/lite';
+import cors from 'cors'; // Import cors
 
 // Load environment variables from .env file
 dotenv.config();
-
-// Create an object with Firebase service account credentials
-const serviceAccount = {
-  type: process.env.TYPE,
-  project_id: process.env.PROJECT_ID,
-  private_key_id: process.env.PRIVATE_KEY_ID,
-  private_key: process.env.PRIVATE_KEY,
-  client_email: process.env.CLIENT_EMAIL,
-  client_id: process.env.CLIENT_ID,
-  auth_uri: process.env.AUTH_URI,
-  token_uri: process.env.TOKEN_URI,
-  auth_provider_x509_cert_url: process.env.AUTH_PROVIDER_X509_CERT_URL,
-  client_x509_cert_url: process.env.CLIENT_X509_CERT_URL,
-  universe_domain: process.env.UNIVERSE_DOMAIN,
-};
 
 // Create an object with Firebase configuration
 const firebaseConfig = {
@@ -32,51 +18,58 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
 };
-// Initialize Firebase app before configuring Firestore
-const firebaseApp = initializeApp({
-  credential: firebaseAdmin.credential.cert(serviceAccount),
-  ...firebaseConfig,
-});
+
+// Initialize Firebase app
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Get Firebase Authentication instance
+const auth = getAuth(firebaseApp); // todo
+
+// Initialize Firestore before using it
+const firestore = getFirestore();
 
 const app = express();
 
-// Middleware to authenticate Firebase tokens
-app.use(async (req, res, next) => {
-  const idToken = req.headers.authorization;
+app.use(cors());
 
+// Middleware to parse JSON request bodies
+app.use(express.json());
+
+// Example: User Registration
+app.post('/api/register', async (req, res) => { // todo
+  const { email, password } = req.body;
   try {
-    const decodedToken = await firebaseAdmin.auth().verifyIdToken(idToken); // Access auth from firebaseAdmin
-    req.user = decodedToken;
-    next();
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    res.json({ message: 'User registered', user });
   } catch (error) {
-    res.status(401).json({ error: 'Unauthorized' });
+    console.error('Error registering user:', error);
+    res.status(500).json({ error: 'Error registering user' });
   }
 });
 
-// Sample protected route
-app.get('/api/protected', (req, res) => {
-  if (!req.user) {
-    res.json({ message: 'This is a protected route.', user: req.user });
+// Example: User Login
+app.post('/api/login', async (req, res) => { // todo
+  const { email, password } = req.body;
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    res.json({ message: 'User logged in', user });
+  } catch (error) {
+    console.error('Error logging in:', error);
+    res.status(500).json({ error: 'Error logging in' });
   }
-  res.json({ message: 'Access granted' });
-});
-
-const firestore = getFirestore();
-connectFirestoreEmulator(firestore, 'localhost', 5002); // Connect to the emulated Firestore
-
-// Initialize Firebase app after configuring Firebase
-initializeApp({
-  credential: firebaseAdmin.credential.cert(serviceAccount), // Access credential from firebaseAdmin
-  ...firebaseConfig,
 });
 
 app.post('/api/add-sample-data', async (req, res) => {
   try {
+    const { name, email, age } = req.body;
     const sampleData = {
-      name: 'John Doe',
-      age: 30,
-      email: 'johndoe@example.com',
+      name,
+      age,
+      email,
     };
+    console.log(sampleData);
 
     const docRef = await addDoc(collection(firestore, 'sampleData'), sampleData);
     res.json({ message: 'Sample data added', docId: docRef.id });

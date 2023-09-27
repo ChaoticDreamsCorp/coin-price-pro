@@ -1,0 +1,175 @@
+[debug] [2023-09-27T05:31:19.243Z] ----------------------------------------------------------------------
+[debug] [2023-09-27T05:31:19.245Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2023-09-27T05:31:19.245Z] CLI Version:   12.5.4
+[debug] [2023-09-27T05:31:19.246Z] Platform:      darwin
+[debug] [2023-09-27T05:31:19.246Z] Node Version:  v18.17.1
+[debug] [2023-09-27T05:31:19.248Z] Time:          Wed Sep 27 2023 01:31:19 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-09-27T05:31:19.248Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-27T05:31:19.354Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-27T05:31:19.355Z] > authorizing via signed-in user (nher1625@gmail.com)
+[debug] [2023-09-27T05:31:19.447Z] java version "19.0.2" 2023-01-17
+
+[debug] [2023-09-27T05:31:19.448Z] Java(TM) SE Runtime Environment (build 19.0.2+7-44)
+Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
+
+[debug] [2023-09-27T05:31:19.452Z] Parsed Java major version: 19
+[info] i  emulators: Starting emulators: firestore, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: firestore, database, hosting"}}
+[debug] [2023-09-27T05:31:21.490Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-09-27T05:31:21.490Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-09-27T05:31:21.491Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-09-27T05:31:21.491Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-09-27T05:31:21.491Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-09-27T05:31:21.491Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":5010}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-09-27T05:31:21.503Z] [hub] writing locator at /var/folders/mm/yzbqm7tx4fv5h3m5m6zwv1vc0000gn/T/hub-realtime-pricing-data.json
+[debug] [2023-09-27T05:31:21.512Z] > refreshing access token with scopes: []
+[debug] [2023-09-27T05:31:21.515Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-27T05:31:21.515Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-27T05:31:22.429Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-09-27T05:31:22.429Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-27T05:31:22.476Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data [none]
+[debug] [2023-09-27T05:31:23.631Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data 200
+[debug] [2023-09-27T05:31:23.632Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data {"projectId":"realtime-pricing-data","projectNumber":"920792287378","displayName":"crypto-pricing","name":"projects/realtime-pricing-data","resources":{"hostingSite":"realtime-pricing-data"},"state":"ACTIVE","etag":"1_7d8f9e2e-897a-4a5d-9d09-31c0ced35fbb"}
+[debug] [2023-09-27T05:31:26.880Z] defaultcredentials: writing to file /Users/bitstop/.config/firebase/nher1625_gmail_com_application_default_credentials.json
+[debug] [2023-09-27T05:31:26.883Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites pageToken=&pageSize=10
+[debug] [2023-09-27T05:31:27.811Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites 200
+[debug] [2023-09-27T05:31:27.812Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites {"sites":[{"name":"projects/realtime-pricing-data/sites/realtime-pricing-data","defaultUrl":"https://realtime-pricing-data.web.app","appId":"1:920792287378:web:4a51dbc93e97738fdf3e4b","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-27T05:31:27.813Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config [none]
+[debug] [2023-09-27T05:31:28.808Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config 200
+[debug] [2023-09-27T05:31:28.808Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config {"projectId":"realtime-pricing-data","appId":"1:920792287378:web:4a51dbc93e97738fdf3e4b","storageBucket":"realtime-pricing-data.appspot.com","apiKey":"AIzaSyCCnlQ5pfr4Cw0OC_n3sTfphJhc6rYQMtU","authDomain":"realtime-pricing-data.firebaseapp.com","messagingSenderId":"920792287378"}
+[info] 
+   Thank you for trying our experimental support for Vite on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-09-27T05:31:39.906Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      },
+      "site": "realtime-pricing-data",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJlbXVsYXRvckhvc3RzIjp7ImZpcmVzdG9yZSI6IjEyNy4wLjAuMTo1MDEwIiwiZGF0YWJhc2UiOiIxMjcuMC4wLjE6OTAwMCJ9LCJjb25maWciOnsicHJvamVjdElkIjoicmVhbHRpbWUtcHJpY2luZy1kYXRhIiwiYXBwSWQiOiIxOjkyMDc5MjI4NzM3ODp3ZWI6NGE1MWRiYzkzZTk3NzM4ZmRmM2U0YiIsInN0b3JhZ2VCdWNrZXQiOiJyZWFsdGltZS1wcmljaW5nLWRhdGEuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lDQ25sUTVwZnI0Q3cwT0NfbjNzVGZwaEpoYzZyWVFNdFUiLCJhdXRoRG9tYWluIjoicmVhbHRpbWUtcHJpY2luZy1kYXRhLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiOTIwNzkyMjg3Mzc4In19; SameSite=Strict; Expires=2025-08-21T16:11:39.906Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "public": "public",
+      "webFramework": "vite"
+    }
+  ]
+}
+[debug] [2023-09-27T05:31:39.911Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-09-27T05:31:39.911Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-09-27T05:31:39.911Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/bitstop/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",5010,"--websocket_port",9150,"--project_id","realtime-pricing-data","--rules","/Users/bitstop/Bitstop/shellhacks_crypto_price/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/bitstop/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",5010,\"--websocket_port\",9150,\"--project_id\",\"realtime-pricing-data\",\"--rules\",\"/Users/bitstop/Bitstop/shellhacks_crypto_price/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2023-09-27T05:31:41.654Z] Sep 27, 2023 1:31:41 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 27, 2023 1:31:41 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2023-09-27T05:31:41.702Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2023-09-27T05:31:41.702Z] 127.0.0.1:5010
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:5010
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:5010\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:5010\n\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-09-27T05:31:41.939Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data [none]
+[debug] [2023-09-27T05:31:43.507Z] Sep 27, 2023 1:31:43 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 27, 2023 1:31:43 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2023-09-27T05:31:43.843Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data 200
+[debug] [2023-09-27T05:31:43.844Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data {"projectId":"realtime-pricing-data","projectNumber":"920792287378","displayName":"crypto-pricing","name":"projects/realtime-pricing-data","resources":{"hostingSite":"realtime-pricing-data"},"state":"ACTIVE","etag":"1_7d8f9e2e-897a-4a5d-9d09-31c0ced35fbb"}
+[debug] [2023-09-27T05:31:43.844Z] database rules config:  []
+[warn] ⚠  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-09-27T05:31:43.847Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-09-27T05:31:43.847Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-09-27T05:31:43.847Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-09-27T05:31:43.847Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/bitstop/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/bitstop/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-09-27T05:31:45.948Z] 01:31:45.945 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"01:31:45.945 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2023-09-27T05:31:46.239Z] 01:31:46.239 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"01:31:46.239 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2023-09-27T05:31:46.371Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites 
+[debug] [2023-09-27T05:31:47.551Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites 200
+[debug] [2023-09-27T05:31:47.551Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/realtime-pricing-data/sites {"sites":[{"name":"projects/realtime-pricing-data/sites/realtime-pricing-data","defaultUrl":"https://realtime-pricing-data.web.app","appId":"1:920792287378:web:4a51dbc93e97738fdf3e4b","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-27T05:31:47.551Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config [none]
+[debug] [2023-09-27T05:31:48.670Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config 200
+[debug] [2023-09-27T05:31:48.670Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/realtime-pricing-data/webApps/1:920792287378:web:4a51dbc93e97738fdf3e4b/config {"projectId":"realtime-pricing-data","appId":"1:920792287378:web:4a51dbc93e97738fdf3e4b","storageBucket":"realtime-pricing-data.appspot.com","apiKey":"AIzaSyCCnlQ5pfr4Cw0OC_n3sTfphJhc6rYQMtU","authDomain":"realtime-pricing-data.firebaseapp.com","messagingSenderId":"920792287378"}
+[info] i  hosting[realtime-pricing-data]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[realtime-pricing-data]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[debug] [2023-09-27T05:31:48.873Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-09-27T05:31:48.873Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-09-27T05:31:48.873Z] Starting Emulator UI with command {"binary":"node","args":["/Users/bitstop/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/bitstop/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-09-27T05:31:49.031Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-09-27T05:31:49.031Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ 127.0.0.1:5010 │ http://127.0.0.1:4000/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Database  │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5002 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /example HTTP/1.1" 200 797 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /example HTTP/1.1\" 200 797 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /@react-refresh HTTP/1.1" 304 - "http://localhost:5002/example" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /@react-refresh HTTP/1.1\" 304 - \"http://localhost:5002/example\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /@vite/client HTTP/1.1" 304 - "http://localhost:5002/example" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /@vite/client HTTP/1.1\" 304 - \"http://localhost:5002/example\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/main.tsx HTTP/1.1" 200 2311 "http://localhost:5002/example" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/main.tsx HTTP/1.1\" 200 2311 \"http://localhost:5002/example\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/App.tsx HTTP/1.1" 200 6769 "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/App.tsx HTTP/1.1\" 200 6769 \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/vite/dist/client/env.mjs HTTP/1.1" 304 - "http://localhost:5002/@vite/client" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/vite/dist/client/env.mjs HTTP/1.1\" 304 - \"http://localhost:5002/@vite/client\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/bootstrap/dist/css/bootstrap.min.css HTTP/1.1\" 304 - \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/containers/Home/index.tsx HTTP/1.1" 200 9214 "http://localhost:5002/src/App.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/containers/Home/index.tsx HTTP/1.1\" 200 9214 \"http://localhost:5002/src/App.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/containers/PostData/index.tsx HTTP/1.1" 200 4585 "http://localhost:5002/src/App.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/containers/PostData/index.tsx HTTP/1.1\" 200 4585 \"http://localhost:5002/src/App.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/components/Shared/Navigation/index.tsx HTTP/1.1" 200 6735 "http://localhost:5002/src/App.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/components/Shared/Navigation/index.tsx HTTP/1.1\" 200 6735 \"http://localhost:5002/src/App.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/components/Shared/Footer/index.tsx HTTP/1.1" 200 4523 "http://localhost:5002/src/App.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/components/Shared/Footer/index.tsx HTTP/1.1\" 200 4523 \"http://localhost:5002/src/App.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/components/PriceWebSocket/index.tsx HTTP/1.1" 200 8522 "http://localhost:5002/src/containers/Home/index.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/components/PriceWebSocket/index.tsx HTTP/1.1\" 200 8522 \"http://localhost:5002/src/containers/Home/index.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/components/SamplePostData/index.tsx HTTP/1.1" 200 19554 "http://localhost:5002/src/containers/PostData/index.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/components/SamplePostData/index.tsx HTTP/1.1\" 200 19554 \"http://localhost:5002/src/containers/PostData/index.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/react.js?v=3b7d41e9 HTTP/1.1" 200 219 "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/react.js?v=3b7d41e9 HTTP/1.1\" 200 219 \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3b7d41e9 HTTP/1.1" 200 35991 "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3b7d41e9 HTTP/1.1\" 200 35991 \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/bootstrap_dist_js_bootstrap__bundle__min__js.js?v=3db9cacf HTTP/1.1" 200 117911 "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/bootstrap_dist_js_bootstrap__bundle__min__js.js?v=3db9cacf HTTP/1.1\" 200 117911 \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/uuid.js?v=e8e12330 HTTP/1.1" 200 15277 "http://localhost:5002/src/components/PriceWebSocket/index.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/uuid.js?v=e8e12330 HTTP/1.1\" 200 15277 \"http://localhost:5002/src/components/PriceWebSocket/index.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/react-router-dom.js?v=89da509c HTTP/1.1" 200 168293 "http://localhost:5002/src/App.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/react-router-dom.js?v=89da509c HTTP/1.1\" 200 168293 \"http://localhost:5002/src/App.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/components/PriceWebSocket/PriceWebSocket.ts HTTP/1.1" 304 - "http://localhost:5002/src/components/PriceWebSocket/index.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/components/PriceWebSocket/PriceWebSocket.ts HTTP/1.1\" 304 - \"http://localhost:5002/src/components/PriceWebSocket/index.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /src/utils.ts HTTP/1.1" 304 - "http://localhost:5002/src/components/PriceWebSocket/index.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /src/utils.ts HTTP/1.1\" 304 - \"http://localhost:5002/src/components/PriceWebSocket/index.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/chunk-ZVMIEU5R.js?v=0891ee76 HTTP/1.1" 200 77791 "http://localhost:5002/node_modules/.vite/deps/react.js?v=3b7d41e9" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/chunk-ZVMIEU5R.js?v=0891ee76 HTTP/1.1\" 200 77791 \"http://localhost:5002/node_modules/.vite/deps/react.js?v=3b7d41e9\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/chunk-UXIASGQL.js?v=0891ee76 HTTP/1.1" 200 1400 "http://localhost:5002/node_modules/.vite/deps/react.js?v=3b7d41e9" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/chunk-UXIASGQL.js?v=0891ee76 HTTP/1.1\" 200 1400 \"http://localhost:5002/node_modules/.vite/deps/react.js?v=3b7d41e9\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] "GET /node_modules/.vite/deps/react-dom_client.js?v=93bb151c HTTP/1.1" 200 926154 "http://localhost:5002/src/main.tsx" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Sep/2023:05:31:58 +0000] \"GET /node_modules/.vite/deps/react-dom_client.js?v=93bb151c HTTP/1.1\" 200 926154 \"http://localhost:5002/src/main.tsx\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}

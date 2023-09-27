@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { 
   createPriceWebSocketConn, 
   addWebSocketEventListener,
@@ -18,16 +19,18 @@ function PriceWebSocket() {
 
   return (
     <>
-      <h1>
+      <div>
         {
-          messages.length > 0 ? // if messages in state
-          messages.map((msg) => { // render message contents
+          messages.length ? // if messages in state
+          messages.map(msg => { // render message contents
+            const uniqueKey = uuidv4(); // Generate a unique key for each message
             return (
               <>
-                <span className="mx-3">BTC Price:</span>
-                <span key={msg.bitcoin}>
-                  {formatCurrency(Number(msg.bitcoin), 'USD')}
-                </span>
+                <div key={uniqueKey}>
+                  <span className="mx-3">
+                    BTC Price: {formatCurrency(Number(msg.bitcoin), 'USD')}
+                  </span>
+                </div>
               </>
             )
           }) : // else, render loading spinner
@@ -35,7 +38,7 @@ function PriceWebSocket() {
             <span className="sr-only d-none">Loading...</span>
           </div>
         }
-      </h1>
+      </div>
     </>
   );
 }
