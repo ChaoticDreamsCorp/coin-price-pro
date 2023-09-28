@@ -241,3 +241,28 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+# Configuring Firebase Local Emulators
+Requirements:
+- Install firebase tools cli: `curl -sL firebase.tools | bash`
+- You should have a `firebase-admin.json` file in the project root. This file will contain service account keys for firebase-admin. This is required in order to run the emulators.
+
+Sample `firebase-admin.json` JSON:
+```
+{
+  "type": "service_account",
+  "project_id": "project-id-here",
+  "private_key_id": "...",
+  "private_key": "-----BEGIN PRIVATE KEY-----some-key-here\n-----END PRIVATE KEY-----\n",
+  "client_email": "...",
+  "client_id": "...",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "...",
+  "client_x509_cert_url": "...",
+  "universe_domain": "..."
+}
+```
+
+- Next run: `npm run emulators`
+- Next run: `npm run server:dev`

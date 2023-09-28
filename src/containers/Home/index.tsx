@@ -12,26 +12,30 @@ function HomeContainer () {
 
   return (
     <>
-      <h1 className="cover-heading">
-        <PriceWebSocket />
-      </h1>
-      <p className="lead">
-      Experience the Future of Crypto Conversion! Discover the easiest way to convert cryptocurrencies with our seamless and user-friendly platform.
-      Get real-time exchange rates, a wide range of supported cryptocurrencies, and a hassle-free conversion process.
-      Join us today and make your crypto conversions a breeze!
-      </p>
-      <p className="lead">
-        <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
-      </p>
-      {emails.map((record) => {
-        return (
-          <div key={record.id} className="card d-none">
-            <div className="card-body">
-              <b>{record.email}</b>
-            </div>
-          </div>
-        )
-      })}
+      <div className="container row p-3">
+        <div className="col-5 mx-auto">
+          <h1 className="cover-heading">
+            <PriceWebSocket />
+          </h1>
+          <p className="lead">
+          Experience the Future of Crypto Conversion! Discover the easiest way to convert cryptocurrencies with our seamless and user-friendly platform.
+          Get real-time exchange rates, a wide range of supported cryptocurrencies, and a hassle-free conversion process.
+          Join us today and make your crypto conversions a breeze!
+          </p>
+          <p className="lead">
+            <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
+          </p>
+          {emails.map((record) => {
+            return (
+              <div key={record.id} className="card d-none">
+                <div className="card-body">
+                  <b>{record.email}</b>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </>
   )
 }

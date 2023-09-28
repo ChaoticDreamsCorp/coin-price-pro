@@ -28,11 +28,6 @@ package-lock.json
 *.user
 *.sln.docstates
 
-# Ignore TypeScript generated files
-*.js
-*.js.map
-*.d.ts
-
 # Ignore logs and npm debug log
 npm-debug.log*
 yarn-debug.log*
@@ -44,3 +39,8 @@ pnpm-debug.log*
 
 # Ignore editor backup files
 *~
+
+# firebase-admin sdk json
+firebase-admin.json
+
+.env
